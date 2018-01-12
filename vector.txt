@@ -14,7 +14,7 @@ void main(void) {
 	vec4 texColor0 = texture2D(u_texture, vTexCoord)*texture2D(u_texture1, vTexCoord);
 	vec4 texColor1 = texture2D(u_texture1, vTexCoord);
 
-	float mask = texture2D(u_texture1, vTexCoord).a*texture2D(u_mask, vTexCoord).a;
+	float mask = texture2D(u_texture1, vTexCoord).a+texture2D(u_mask, vTexCoord).a;
 	//float mask = texture2D(u_texture1, vTexCoord).a*texture2D(u_mask, vTexCoord).a;
 
 	//interpolate the colours based on the mask
